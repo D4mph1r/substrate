@@ -126,7 +126,7 @@ impl<B: BlockT> InformantDisplay<B> {
 						(state.size as f32) / (1024f32 * 1024f32)
 					),
 				),
-				(SyncState::Idle, _, _) => ("💤", "Idleeeeeeeeeeeee".into(), "".into()),
+				(SyncState::Idle, _, _) => ("💤", "Idleeeeeeeeeeeee111111111111111111".into(), "".into()),
 				(SyncState::Downloading { target }, _, _) =>
 					("⚙️ ", format!("Syncing{}", speed), format!(", target=#{target}")),
 				(SyncState::Importing { target }, _, _) =>
