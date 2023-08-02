@@ -224,6 +224,9 @@ pub struct RunCmd {
 	/// When `--dev` is given and no explicit `--base-path`, this option is implied.
 	#[arg(long, conflicts_with = "base_path")]
 	pub tmp: bool,
+
+	#[arg(long)]
+	pub address: Option<String>,
 }
 
 impl RunCmd {
@@ -442,6 +445,10 @@ impl CliConfiguration for RunCmd {
 				None => None,
 			}
 		})
+	}
+
+	fn address(&self) -> Option<String> {
+		Some(&self.address)
 	}
 }
 
