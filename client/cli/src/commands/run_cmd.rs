@@ -392,11 +392,6 @@ impl CliConfiguration for RunCmd {
 			}
 		})
 	}
-
-	fn address(&self) -> Result<Option<String>> {
-		// Imply forced authoring on --dev
-		Ok(self.address)
-	}
 }
 
 /// Check whether a node name is considered as valid.
